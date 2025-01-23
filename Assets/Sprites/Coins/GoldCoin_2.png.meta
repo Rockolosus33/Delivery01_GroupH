@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 906f0f5817856c34b88e5323bd8b0ed5
+guid: 546df4f996606b840a8c6368d9ebfa8e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5225540622116197949
-    second: 02_0
+      213: 29693280100327906
+    second: GoldCoin_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 02_0
+      name: GoldCoin_2_0
       rect:
         serializedVersion: 2
         x: 4
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c9e3638d762b77b0800000000000000
-      internalID: -5225540622116197949
+      spriteID: 2e1a89481ed796000800000000000000
+      internalID: 29693280100327906
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      02_0: -5225540622116197949
+      GoldCoin_2_0: 29693280100327906
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

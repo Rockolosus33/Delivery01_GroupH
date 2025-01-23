@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bdb1244238cc761488b08a8970592031
+guid: e43a0995fc61d23469de0f94da66a6e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3164809056393425246
-    second: 01_0
+      213: -7382692658118045431
+    second: DiamondEffect_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 01_0
+      name: DiamondEffect_1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 1
-        width: 13
-        height: 13
+        x: 6
+        y: 6
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ae0bbb5ee65414d0800000000000000
-      internalID: -3164809056393425246
+      spriteID: 9015df284286b8990800000000000000
+      internalID: -7382692658118045431
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      01_0: -3164809056393425246
+      DiamondEffect_1_0: -7382692658118045431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
