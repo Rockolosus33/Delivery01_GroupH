@@ -7,6 +7,7 @@ public class CoinScript : MonoBehaviour
 
     public static Action<CoinScript> OnCoinCollected;
 
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
