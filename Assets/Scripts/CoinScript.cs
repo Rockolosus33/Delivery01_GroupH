@@ -9,11 +9,17 @@ public class CoinScript : MonoBehaviour
     public static Action<CoinScript> OnCoinCollected;
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
     private void Start()
     {
         animator = GetComponent<Animator>();
     }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
     private void OnTriggerEnter2D(Collider2D other)
