@@ -25,7 +25,6 @@ public class ScoreText : MonoBehaviour
 
     private void UpdateScoreText(int score)
     {
-        Debug.Log("Lamine");
         label.text = score.ToString();
     }
 }

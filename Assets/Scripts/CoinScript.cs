@@ -3,17 +3,27 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
+    private Animator animator;
     public int coinValue = 5;
 
     public static Action<CoinScript> OnCoinCollected;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            OnCoinCollected?.Invoke(this);
-            Destroy(gameObject);
+            animator.SetTrigger("coinCollected");
         }
+    }
+
+    private void DestroyCoin()
+    {
+        OnCoinCollected?.Invoke(this);
+        Destroy(gameObject);
     }
 }
