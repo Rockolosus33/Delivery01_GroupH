@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2421108375318392573}
   - component: {fileID: 6018730786705483397}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (32x32) 1_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3217229020641155002}
   - component: {fileID: 7179953590711187970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Wall Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6913814351761850126}
   - component: {fileID: 423702487497974210}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (32x32) 1_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2494347701253647167}
   - component: {fileID: 4398496730915991789}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain (32x32) 1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
