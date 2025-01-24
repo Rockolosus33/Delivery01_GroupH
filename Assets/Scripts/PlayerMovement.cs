@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,11 +9,18 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D playerRigidbody;
     private float playerHorizontalDir;
     private Vector3 playerScale;
+    private Animator playerAnimator;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
         playerScale = this.transform.localScale;
+    }
+
+    private void Update()
+    {
+        playerAnimator.SetFloat("movingState", Mathf.Abs(playerHorizontalDir));
     }
 
     void FixedUpdate()
