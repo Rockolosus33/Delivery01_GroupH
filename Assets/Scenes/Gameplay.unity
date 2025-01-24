@@ -361,6 +361,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 519420032}
   - {fileID: 1918508236}
   - {fileID: 254180828}
   m_Father: {fileID: 0}
@@ -904,7 +905,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -928,12 +929,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 155923685}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!82 &519420033
 AudioSource:
@@ -1839,11 +1840,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3964781007015213912, guid: 13942d2a23aab964aa63a7fb462af814, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.90965
+      value: -9.49
       objectReference: {fileID: 0}
     - target: {fileID: 3964781007015213912, guid: 13942d2a23aab964aa63a7fb462af814, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.9817075
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 3964781007015213912, guid: 13942d2a23aab964aa63a7fb462af814, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2637,7 +2638,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 519420032}
   - {fileID: 50878369}
   - {fileID: 155923685}
   - {fileID: 1791952462}
