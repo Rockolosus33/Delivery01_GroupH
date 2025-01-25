@@ -38,31 +38,34 @@ public class PlayerJump : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (IsGrounded())
+        if (!PlayerDie.playerHasDied)
         {
-            jumpCount = 2;
-            playerAnimator.SetBool("canRunJumAnimation", false);
-        }
-
-        if (IsPeakReached()) TweakGravity();
-
-        if (IsOnWall())
-        {
-            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x,
-            Mathf.Max(_rigidbody.linearVelocity.y, -WallSlideSpeed));
-
-            if (!hasTouchedWall)
+            if (IsGrounded())
             {
-                jumpCount++;
-                hasTouchedWall = true;
+                jumpCount = 2;
+                playerAnimator.SetBool("canRunJumAnimation", false);
             }
-        }
-        else
-        {
-            hasTouchedWall = false;
-        }
 
-        OnWallTouched?.Invoke(IsOnWall());
+            if (IsPeakReached()) TweakGravity();
+
+            if (IsOnWall())
+            {
+                _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x,
+                Mathf.Max(_rigidbody.linearVelocity.y, -WallSlideSpeed));
+
+                if (!hasTouchedWall)
+                {
+                    jumpCount++;
+                    hasTouchedWall = true;
+                }
+            }
+            else
+            {
+                hasTouchedWall = false;
+            }
+
+            OnWallTouched?.Invoke(IsOnWall());
+        }
     }
 
     public bool IsOnWall()
@@ -73,28 +76,34 @@ public class PlayerJump : MonoBehaviour
 
     public void OnJumpStarted()
     {
-        jumpCount--;
-
-        if (jumpCount > 0) 
+        if (!PlayerDie.playerHasDied)
         {
-            // meter audio
-            jumpSFX.Play();
-            if (IsGrounded())
-            {
-                playerAnimator.SetBool("canRunJumAnimation", true);
-            }
+            jumpCount--;
 
-            SetGravity();
-            var vel = new Vector2(_rigidbody.linearVelocity.x, GetJumpForce());
-            _rigidbody.linearVelocity = vel;
-            _jumpStartedTime = Time.time;
+            if (jumpCount > 0)
+            {
+                // meter audio
+                jumpSFX.Play();
+                if (IsGrounded())
+                {
+                    playerAnimator.SetBool("canRunJumAnimation", true);
+                }
+
+                SetGravity();
+                var vel = new Vector2(_rigidbody.linearVelocity.x, GetJumpForce());
+                _rigidbody.linearVelocity = vel;
+                _jumpStartedTime = Time.time;
+            }
         }
     }
 
     public void OnJumpFinished()
     {
-        float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
-        _rigidbody.gravityScale *= fractionOfTimePressed;
+        if (!PlayerDie.playerHasDied)
+        {
+            float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
+            _rigidbody.gravityScale *= fractionOfTimePressed;
+        }
     }
 
     private bool IsPeakReached()

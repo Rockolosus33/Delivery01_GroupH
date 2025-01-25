@@ -7,12 +7,16 @@ public class PlayerDie : MonoBehaviour
     private AudioSource deathSFX;
     [SerializeField] private AudioClip dieSound;
 
+    public static bool playerHasDied;
+
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
         playerAnimator.SetFloat("timeToDie", TimeManager.instance.GetTime());
         playerAnimator.SetBool("isDying", false);
         deathSFX = GetComponent<AudioSource>();
+
+        playerHasDied = false;
     }
 
     void Update()
@@ -22,6 +26,7 @@ public class PlayerDie : MonoBehaviour
         if (TimeManager.instance.GetTime() >= 5f && !playerAnimator.GetBool("isDying"))
         {
             playerAnimator.SetBool("isDying", false);
+            playerHasDied = true;
         }
     }
 

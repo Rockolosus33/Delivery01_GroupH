@@ -37,11 +37,19 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!_isTouchingWall)
+        if (!PlayerDie.playerHasDied)
         {
-            Vector2 velocity = playerRigidbody.linearVelocity;
-            velocity.x = playerHorizontalDir * Speed;
-            playerRigidbody.linearVelocity = velocity;
+            if (!_isTouchingWall)
+            {
+                Vector2 velocity = playerRigidbody.linearVelocity;
+                velocity.x = playerHorizontalDir * Speed;
+                playerRigidbody.linearVelocity = velocity;
+            }
+        }
+        else
+        {
+            playerRigidbody.linearVelocity = Vector3.zero;
+            playerRigidbody.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
     }
 
@@ -52,18 +60,21 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
-        var inputVal = value.Get<Vector2>();
-        playerHorizontalDir = inputVal.x;
+        if (!PlayerDie.playerHasDied)
+        {
+            var inputVal = value.Get<Vector2>();
+            playerHorizontalDir = inputVal.x;
 
-        if (playerHorizontalDir < 0)
-        {
-            playerScale.x = -Mathf.Abs(playerScale.x);
-            transform.localScale = playerScale;
-        }
-        else if (playerHorizontalDir > 0)
-        {
-            playerScale.x = Mathf.Abs(playerScale.x);
-            transform.localScale = playerScale;
+            if (playerHorizontalDir < 0)
+            {
+                playerScale.x = -Mathf.Abs(playerScale.x);
+                transform.localScale = playerScale;
+            }
+            else if (playerHorizontalDir > 0)
+            {
+                playerScale.x = Mathf.Abs(playerScale.x);
+                transform.localScale = playerScale;
+            }
         }
     }
 }
