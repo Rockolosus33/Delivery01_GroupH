@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class EndingCanvas : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI finalScoreText;
-    [SerializeField] private float maxScore;
     [SerializeField] private GameObject winPanel;
     [SerializeField] private GameObject losePanel;
 
@@ -16,7 +15,7 @@ public class EndingCanvas : MonoBehaviour
         {
             finalScoreText.text = "Score: " + ScoreSystem.instance.GetScore().ToString();
 
-            if (ScoreSystem.instance.GetScore() == maxScore)
+            if (ScoreSystem.instance.GetScore() == ScoreSystem.instance.GetMaxScore())
             {
                 winPanel.SetActive(true);
                 losePanel.SetActive(false);

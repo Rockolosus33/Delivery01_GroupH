@@ -1,11 +1,13 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreSystem : MonoBehaviour
 {
-    public int playerScore;
-    public static ScoreSystem instance;
+    [SerializeField] private int maxScore;
+    [SerializeField] private int playerScore;
 
+    public static ScoreSystem instance;
     public static Action<int> OnScoreUpdated;
 
     private void Awake()
@@ -15,20 +17,43 @@ public class ScoreSystem : MonoBehaviour
             ScoreSystem.instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        else 
+        else
         {
             Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        playerScore = 0;
+    }
+
+    private void Update()
+    {
+        if (playerScore == maxScore)
+        {
+            SceneManager.LoadScene("Ending");
         }
     }
 
     private void OnEnable()
     {
         CoinScript.OnCoinCollected += UpdateScore;
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDisable()
     {
         CoinScript.OnCoinCollected -= UpdateScore;
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "Ending" || scene.name == SceneManager.GetActiveScene().name)
+        {
+            ResetScore();
+        }
     }
 
     private void UpdateScore(CoinScript coin)
@@ -40,5 +65,16 @@ public class ScoreSystem : MonoBehaviour
     public float GetScore()
     {
         return playerScore;
+    }
+
+    public float GetMaxScore()
+    {
+        return maxScore;
+    }
+
+    public void ResetScore()
+    {
+        playerScore = 0;
+        OnScoreUpdated?.Invoke(playerScore);
     }
 }

@@ -1120,7 +1120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   finalScoreText: {fileID: 218198176}
-  maxScore: 100
   winPanel: {fileID: 1156970712}
   losePanel: {fileID: 103242277}
 --- !u!1660057539 &9223372036854775807
