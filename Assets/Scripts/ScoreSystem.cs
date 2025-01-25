@@ -6,6 +6,7 @@ public class ScoreSystem : MonoBehaviour
 {
     [SerializeField] private int maxScore;
     [SerializeField] private int playerScore;
+    [SerializeField] private int lastScore;
 
     public static ScoreSystem instance;
     public static Action<int> OnScoreUpdated;
@@ -26,6 +27,7 @@ public class ScoreSystem : MonoBehaviour
     private void Start()
     {
         playerScore = 0;
+        lastScore = playerScore;
     }
 
     private void Update()
@@ -64,7 +66,7 @@ public class ScoreSystem : MonoBehaviour
 
     public float GetScore()
     {
-        return playerScore;
+        return lastScore;
     }
 
     public float GetMaxScore()
@@ -74,6 +76,7 @@ public class ScoreSystem : MonoBehaviour
 
     public void ResetScore()
     {
+        lastScore = playerScore;
         playerScore = 0;
         OnScoreUpdated?.Invoke(playerScore);
     }

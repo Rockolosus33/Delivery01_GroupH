@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
 
     void OnExit()
     {
-        Debug.Log("Exit...");
         Application.Quit();
     }
 }
