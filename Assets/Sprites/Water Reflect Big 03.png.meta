@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 64e1131087cf7cc458b68694895b37c3
+guid: b50e73541c9528944b8690d6822f7872
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8432024843727935000
-    second: Big Clouds_0
+      213: 4961078916621687355
+    second: Water Reflect Big 03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Big Clouds_0
+      name: Water Reflect Big 03_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 448
-        height: 101
+        width: 170
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e9e354541e6bfa80800000000000000
-      internalID: -8432024843727935000
+      spriteID: b3a5aef5dfa49d440800000000000000
+      internalID: 4961078916621687355
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Big Clouds_0: -8432024843727935000
+      Water Reflect Big 03_0: 4961078916621687355
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
