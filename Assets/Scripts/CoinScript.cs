@@ -5,6 +5,7 @@ public class CoinScript : MonoBehaviour
 {
     private Animator animator;
     private Collider2D coinCollider;
+
     public int coinValue = 5;
 
     public static Action<CoinScript> OnCoinCollected;

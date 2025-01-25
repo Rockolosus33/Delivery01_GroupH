@@ -4,6 +4,7 @@ using UnityEngine;
 public class PowerUpScript : MonoBehaviour
 {
     [SerializeField] private float incrementJumpValue = 0.2f;
+
     private Animator animator;
     private Collider2D skullCollider;
     private AudioSource skullSFX;

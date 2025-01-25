@@ -25,9 +25,9 @@ public class PlayerJump : MonoBehaviour
     private float originalGravityValue = 9.81f;
     private bool hasTouchedWall = false;
     private Animator playerAnimator;
+    private AudioSource jumpSFX;
 
     public static Action<bool> OnWallTouched;
-    private AudioSource jumpSFX;
 
     private void Start()
     {
@@ -92,7 +92,6 @@ public class PlayerJump : MonoBehaviour
 
             if (jumpCount > 0)
             {
-                // meter audio
                 jumpSFX.Play();
                 if (IsGrounded())
                 {

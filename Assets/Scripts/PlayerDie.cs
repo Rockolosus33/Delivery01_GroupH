@@ -5,6 +5,7 @@ public class PlayerDie : MonoBehaviour
 {
     private Animator playerAnimator;
     private AudioSource deathSFX;
+
     [SerializeField] private AudioClip dieSound;
 
     public static bool playerHasDied;

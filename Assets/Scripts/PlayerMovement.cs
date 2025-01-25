@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     private float playerHorizontalDir;
     private Vector3 playerScale;
     private Animator playerAnimator;
-
     private bool _isTouchingWall = false;
 
     void Start()
