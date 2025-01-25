@@ -1,16 +1,24 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class EndingCanvas : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Text finalScoreText;
+    [SerializeField] private float maxScore;
 
-    // Update is called once per frame
-    void Update()
+    void Awake()
     {
-        
+        finalScoreText.text = ScoreSystem.instance.GetScore().ToString();
+
+        if (ScoreSystem.instance.GetScore() == maxScore)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 }
