@@ -361,6 +361,23 @@ This EULA and END-USER's relationship with Licensor under this EULA, shall be go
 Any dispute arising out of, relating to or in connection with these Terms (including any disputes regarding the existence, validity, interpretation, performance, breach or termination thereof or any dispute regarding non-contractual obligations arising out of or relating to be) will be referred to and finally resolved by binding arbitration administered by the American Arbitration Association (“AAA”) under the AAA’s Commercial Arbitration Rules. The seat of arbitration will be the City and County of San Francisco, California. The number of arbitrators will be three with the claimant party nominating one arbitrator, the respondent party nominating one arbitrator and the third and presiding arbitrator being nominated by the two party appointed arbitrators within 30 days of the appointment of the second arbitrator. The language of arbitration will be English. Except in respect of disputes falling within the Arbitration Exceptions set out below, the parties agree that they are each waiving the right to a trial by jury. The arbitration award will be final and binding on the parties. Judgment upon the award may be entered by any court having jurisdiction of the award or having jurisdiction over the relevant party or its assets.
 
 
+--> SOUND EFFECTS LICENSE: https://dustyroom.com/free-casual-game-sounds/
+
+Dustyroom Casual Game Sound - One Shot SFX Pack
+ The included samples have been created by Dustyroom game studio.
+ Everything in the pack licensed CC Zero (CC0).
+ You may use the sounds for free in non-commercial and commercial projects.
+ It is not mandatory to credit the author (Dustyroom or dustyroom.com) but it is always a good move.
+ The pack at a glance:
+ • 50 audio samples
+ • Includes UX / UI sounds
+ • 24-bit WAV format, 44.1 kHz Stereo
+ • Covers most events of any casual game: bonuses, tile removal, ticking clocks etc
+ • 11.4 MB size on disk
+ • Everything in the pack licensed CC Zero (CC0)
+ @dustyroomgames
+
+
 --> TEXT FONT LICENSE:
 
 Copyright 2020 The Kanit Project Authors (https://github.com/cadsondemak/kanit)

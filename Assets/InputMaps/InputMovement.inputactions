@@ -168,6 +168,17 @@
                 },
                 {
                     "name": "",
+                    "id": "23102a33-5136-4f46-858f-2af34d34c579",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "JumpStarted",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "a378af22-ea77-4d44-b0c3-92c5ea4e606d",
                     "path": "<Keyboard>/space",
                     "interactions": "",
