@@ -25,7 +25,7 @@ public class TimeManager : MonoBehaviour
 
     void Update()
     {
-        if (timer < 30)
+        if (timer < 30f)
         {
             timer += Time.deltaTime;
         }

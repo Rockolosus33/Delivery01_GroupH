@@ -188,7 +188,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: timeToDie
-    m_EventTreshold: 5
+    m_EventTreshold: 30
   - m_ConditionMode: 2
     m_ConditionEvent: canRunJumAnimation
     m_EventTreshold: 0
@@ -277,7 +277,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: timeToDie
-    m_EventTreshold: 5
+    m_EventTreshold: 30
   - m_ConditionMode: 2
     m_ConditionEvent: isDying
     m_EventTreshold: 0
@@ -308,7 +308,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0.1
   - m_ConditionMode: 4
     m_ConditionEvent: timeToDie
-    m_EventTreshold: 5
+    m_EventTreshold: 30
   - m_ConditionMode: 2
     m_ConditionEvent: canRunJumAnimation
     m_EventTreshold: 0

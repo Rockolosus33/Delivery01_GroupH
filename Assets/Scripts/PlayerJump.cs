@@ -36,6 +36,16 @@ public class PlayerJump : MonoBehaviour
         playerAnimator = GetComponent<Animator>();
     }
 
+    private void OnEnable()
+    {
+        PowerUpScript.OnPowerUpCollected += ChangeJumpForceWithPowerUp;
+    }
+
+    private void OnDisable()
+    {
+        PowerUpScript.OnPowerUpCollected -= ChangeJumpForceWithPowerUp;
+    }
+
     private void FixedUpdate()
     {
         if (!PlayerDie.playerHasDied)
@@ -123,6 +133,11 @@ public class PlayerJump : MonoBehaviour
     private void TweakGravity()
     {
         _rigidbody.gravityScale *= gravityWhenFalling;
+    }
+
+    private void ChangeJumpForceWithPowerUp(float value)
+    {
+        initialJumpForce += value;
     }
 
     private float GetJumpForce()
