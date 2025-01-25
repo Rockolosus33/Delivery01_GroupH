@@ -9,9 +9,13 @@ public class TimeManager : MonoBehaviour
     private void Awake()
     {
         if (TimeManager.instance == null)
+        {
             TimeManager.instance = this;
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
     void Start()

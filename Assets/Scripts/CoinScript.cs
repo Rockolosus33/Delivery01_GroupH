@@ -4,6 +4,7 @@ using UnityEngine;
 public class CoinScript : MonoBehaviour
 {
     private Animator animator;
+    private Collider2D coinCollider;
     public int coinValue = 5;
 
     public static Action<CoinScript> OnCoinCollected;
@@ -11,6 +12,7 @@ public class CoinScript : MonoBehaviour
 
     private void Start()
     {
+        coinCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         coinSFX = GetComponent<AudioSource>();
     }
@@ -21,12 +23,13 @@ public class CoinScript : MonoBehaviour
         {
             animator.SetTrigger("coinCollected");
             coinSFX.Play();
+            coinCollider.enabled = false;
         }
     }
 
     private void DestroyCoin()
     {
         OnCoinCollected?.Invoke(this);
-        Destroy(gameObject);
+        Destroy(gameObject, coinSFX.clip.length);
     }
 }

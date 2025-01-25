@@ -11,9 +11,14 @@ public class ScoreSystem : MonoBehaviour
     private void Awake()
     {
         if (ScoreSystem.instance == null)
+        {
             ScoreSystem.instance = this;
-        else
+            DontDestroyOnLoad(gameObject);
+        }
+        else 
+        {
             Destroy(gameObject);
+        }
     }
 
     private void OnEnable()
