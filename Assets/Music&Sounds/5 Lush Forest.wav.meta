@@ -2,7 +2,7 @@ fileFormatVersion: 2
 guid: e8437c91b4c064a41a71c19d91b2a7dc
 AudioImporter:
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 8
   defaultSettings:
     serializedVersion: 2
     loadType: 0
@@ -21,10 +21,3 @@ AudioImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 301447
-  packageName: Free Dungeon Music Pack
-  packageVersion: 1.0
-  assetPath: Assets/DungeonMusicPack/5 Lush Forest.wav
-  uploadId: 705351
