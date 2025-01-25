@@ -7,12 +7,12 @@ public class CoinScript : MonoBehaviour
     public int coinValue = 5;
 
     public static Action<CoinScript> OnCoinCollected;
-    private AudioSource audioSource;
+    private AudioSource coinSFX;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        audioSource = GetComponent<AudioSource>();
+        coinSFX = GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -20,7 +20,7 @@ public class CoinScript : MonoBehaviour
         if (other.tag == "Player")
         {
             animator.SetTrigger("coinCollected");
-            audioSource.Play();
+            coinSFX.Play();
         }
     }
 

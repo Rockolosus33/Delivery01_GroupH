@@ -27,9 +27,11 @@ public class PlayerJump : MonoBehaviour
     private Animator playerAnimator;
 
     public static Action<bool> OnWallTouched;
+    private AudioSource jumpSFX;
 
     private void Start()
     {
+        jumpSFX = GetComponent<AudioSource>();
         _rigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
     }
@@ -75,6 +77,8 @@ public class PlayerJump : MonoBehaviour
 
         if (jumpCount > 0) 
         {
+            // meter audio
+            jumpSFX.Play();
             if (IsGrounded())
             {
                 playerAnimator.SetBool("canRunJumAnimation", true);
