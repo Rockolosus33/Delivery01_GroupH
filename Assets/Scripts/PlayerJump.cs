@@ -1,38 +1,53 @@
+using System;
 using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    [SerializeField] private float jumpForce;
     [SerializeField] private Transform groundDetector;
-    [SerializeField] private LayerMask groundLayerMask;
     [SerializeField] private float groundCheckRadius = 0.2f;
 
     [SerializeField] private Transform wallDetector;
     [SerializeField] private float wallCheckRadius = 0.1f;
-    [SerializeField] private float slidingSpeed;
+    [SerializeField] private LayerMask groundLayerMask;
 
+    public float JumpHeight;
+    public float DistanceToMaxHeight;
+    public float SpeedHorizontal;
+    public float PressTimeToMaxJump;
+    public float WallSlideSpeed = 1;
+    public float gravityWhenFalling = 1.2f;
+    public float initialJumpForce = 2f;
+
+    private Rigidbody2D _rigidbody;
+    private float _lastVelocityY;
+    private float _jumpStartedTime;
+    private int jumpCount = 2;
+    private float originalGravityValue = 9.81f;
     private bool hasTouchedWall = false;
+    private Animator playerAnimator;
 
-    Rigidbody2D playerRigidbody;
-    private int jumpCount = 1;
+    public static Action<bool> OnWallTouched;
 
     private void Start()
     {
-        playerRigidbody = GetComponent<Rigidbody2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        playerAnimator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
     {
         if (IsGrounded())
         {
-            jumpCount = 1;
+            jumpCount = 2;
+            playerAnimator.SetBool("canRunJumAnimation", false);
         }
+
+        if (IsPeakReached()) TweakGravity();
 
         if (IsOnWall())
         {
-            Vector2 velocity = playerRigidbody.linearVelocity;
-            velocity.y = -slidingSpeed;
-            playerRigidbody.linearVelocity = velocity;
+            _rigidbody.linearVelocity = new Vector2(_rigidbody.linearVelocity.x,
+            Mathf.Max(_rigidbody.linearVelocity.y, -WallSlideSpeed));
 
             if (!hasTouchedWall)
             {
@@ -44,6 +59,8 @@ public class PlayerJump : MonoBehaviour
         {
             hasTouchedWall = false;
         }
+
+        OnWallTouched?.Invoke(IsOnWall());
     }
 
     public bool IsOnWall()
@@ -52,21 +69,58 @@ public class PlayerJump : MonoBehaviour
         return colliders.Length > 0;
     }
 
-    void OnJump()
+    public void OnJumpStarted()
     {
+        jumpCount--;
+
         if (jumpCount > 0) 
         {
-            SetGravity();
-            Vector2 vel = new Vector2(playerRigidbody.linearVelocity.x, jumpForce);
-            playerRigidbody.linearVelocity = vel;
+            if (IsGrounded())
+            {
+                playerAnimator.SetBool("canRunJumAnimation", true);
+            }
 
-            jumpCount--;
+            SetGravity();
+            var vel = new Vector2(_rigidbody.linearVelocity.x, GetJumpForce());
+            _rigidbody.linearVelocity = vel;
+            _jumpStartedTime = Time.time;
         }
+    }
+
+    public void OnJumpFinished()
+    {
+        float fractionOfTimePressed = 1 / Mathf.Clamp01((Time.time - _jumpStartedTime) / PressTimeToMaxJump);
+        _rigidbody.gravityScale *= fractionOfTimePressed;
+    }
+
+    private bool IsPeakReached()
+    {
+        bool reached = ((_lastVelocityY * _rigidbody.linearVelocity.y) < 0);
+        _lastVelocityY = _rigidbody.linearVelocity.y;
+
+        return reached;
     }
 
     private void SetGravity()
     {
-        playerRigidbody.gravityScale = 1f;
+        var grav = initialJumpForce * JumpHeight * (SpeedHorizontal * SpeedHorizontal) / (DistanceToMaxHeight * DistanceToMaxHeight);
+        _rigidbody.gravityScale = grav / originalGravityValue;
+    }
+
+    private void TweakGravity()
+    {
+        _rigidbody.gravityScale *= gravityWhenFalling;
+    }
+
+    private float GetJumpForce()
+    {
+        return initialJumpForce * JumpHeight * SpeedHorizontal / DistanceToMaxHeight;
+    }
+
+    private bool IsGrounded()
+    {
+        var colliders = Physics2D.OverlapCircleAll(groundDetector.position, groundCheckRadius, groundLayerMask);
+        return colliders.Length > 0;
     }
 
     void OnDrawGizmosSelected()
@@ -76,11 +130,5 @@ public class PlayerJump : MonoBehaviour
 
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundDetector.position, groundCheckRadius);
-    }
-
-    private bool IsGrounded()
-    {
-        var colliders = Physics2D.OverlapCircleAll(groundDetector.position, groundCheckRadius, groundLayerMask);
-        return colliders.Length > 0;
     }
 }

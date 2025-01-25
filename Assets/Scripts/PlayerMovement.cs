@@ -11,11 +11,23 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 playerScale;
     private Animator playerAnimator;
 
+    private bool _isTouchingWall = false;
+
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         playerScale = this.transform.localScale;
+    }
+
+    private void OnEnable()
+    {
+        PlayerJump.OnWallTouched += IsOnWall;
+    }
+
+    private void OnDisable()
+    {
+        PlayerJump.OnWallTouched -= IsOnWall;
     }
 
     private void Update()
@@ -25,9 +37,17 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 velocity = playerRigidbody.linearVelocity;
-        velocity.x = playerHorizontalDir * Speed;
-        playerRigidbody.linearVelocity = velocity;
+        if (!_isTouchingWall)
+        {
+            Vector2 velocity = playerRigidbody.linearVelocity;
+            velocity.x = playerHorizontalDir * Speed;
+            playerRigidbody.linearVelocity = velocity;
+        }
+    }
+
+    public void IsOnWall(bool isTouchingWall)
+    {
+        _isTouchingWall = isTouchingWall;
     }
 
     void OnMove(InputValue value)

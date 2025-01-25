@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aee6b1cd02299c643994886613df0fac
+guid: 6e23cc775d71f2242a98cf9fcbeea93e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7570946276690308531
-    second: Run Sword 06_0
+      213: 2346657496382734647
+    second: Jump_02_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run Sword 06_0
+      name: Jump_02_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 7
-        width: 39
-        height: 28
+        x: 20
+        y: 8
+        width: 24
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d42de4459789ee690800000000000000
-      internalID: -7570946276690308531
+      spriteID: 73186615f80019020800000000000000
+      internalID: 2346657496382734647
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Run Sword 06_0: -7570946276690308531
+      Jump_02_0: 2346657496382734647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

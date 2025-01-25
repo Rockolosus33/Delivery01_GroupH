@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f598f6ec53d39b44285c2cd13124a68d
+guid: 8ef1219306d528d438f91a17b4859ee4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9037018841081032334
-    second: Run Sword 04_0
+      213: -7740310560375165510
+    second: Idle_04_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Run Sword 04_0
+      name: Idle_04_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 10
-        width: 41
-        height: 29
+        x: 19
+        y: 7
+        width: 26
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e8ea52b71c0f96d70800000000000000
-      internalID: 9037018841081032334
+      spriteID: abd22a52e84e49490800000000000000
+      internalID: -7740310560375165510
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Run Sword 04_0: 9037018841081032334
+      Idle_04_0: -7740310560375165510
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
