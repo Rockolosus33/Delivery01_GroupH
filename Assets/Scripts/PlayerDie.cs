@@ -4,12 +4,15 @@ using UnityEngine.SceneManagement;
 public class PlayerDie : MonoBehaviour
 {
     private Animator playerAnimator;
+    private AudioSource deathSFX;
+    [SerializeField] private AudioClip dieSound;
 
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
         playerAnimator.SetFloat("timeToDie", TimeManager.instance.GetTime());
         playerAnimator.SetBool("isDying", false);
+        deathSFX = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -24,6 +27,7 @@ public class PlayerDie : MonoBehaviour
 
     public void StopDying()
     {
+        deathSFX.PlayOneShot(dieSound);
         playerAnimator.SetBool("isDying", true);
     }
 
