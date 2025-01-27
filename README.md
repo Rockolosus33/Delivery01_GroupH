@@ -20,10 +20,6 @@ Keyboard:
  - Keyboard: ENTER to start/restart game
  - Keyboard: ESCAPE to exit game and close program
 
-### Screenshots
-
-_TODO: Show your game to the world, animated GIFs recommended!._
-
 ### Developers
 
  - Gerard - Level Designer / Map building
@@ -36,4 +32,4 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for further details.
 
-*Copyright (c) $(Year) $(Developers Names)*
+*Copyright (c) (2025) (Gerard De la Torre Perpinya, Oscar Garcia Perez, Josep Basart Perez, Bernat Noheras Viñolas, Joel Iglesias Montserrat*
