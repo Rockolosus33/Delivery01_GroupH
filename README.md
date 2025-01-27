@@ -1,23 +1,24 @@
-## Delivery 01 - $(Game Title)
+## Delivery 01 - PLATFORMER GAME
 
-![$(Game Title)](Screenshots/screenshot01.png "$(Game Title)")
+![PIRARUN](Screenshots/screenshot01.png "$(Game Title)")
 
 ### Description
 
-$(Your Game Description)
+2D platform game where you must get 100 points before time runs out.
 
 ### Features
 
- - $(Game Feature 01)
- - $(Game Feature 02)
- - $(Game Feature 03)
+ - Time trial
+ - Parkour
+ - 2D
 
 ### Controls
 
 Keyboard:
- - $(Game Control 01)
- - $(Game Control 02)
- - $(Game Control 03)
+ - Keyboard: WASD and Arrow Keys for player movement 
+ - Keyboard: SPACE for player jump
+ - Keyboard: ENTER to start/restart game
+ - Keyboard: ESCAPE to exit game and close program
 
 ### Screenshots
 
@@ -25,20 +26,14 @@ _TODO: Show your game to the world, animated GIFs recommended!._
 
 ### Developers
 
- - $(Developer 01) - $(Role/Tasks Developed)
- - $(Developer 02) - $(Role/Tasks Developed)
- - $(Developer 03) - $(Role/Tasks Developed)
-
-### Links
-
- - YouTube Gameplay: $(YouTube Link)
- - itch.io Release: $(itch.io Game Page)
- - Steam Release: $(Steam Game Page)
+ - Gerard - Level Designer / Map building
+ - Oscar - Music sound SFX / Game tester / World record --> 16:20s
+ - Josep - GitHub Admin / Camera Implementation
+ - Bernat - Programmer / Input System
+ - Joel - Lead Programmer / Main scripts
 
 ### License
 
 This game sources are licensed under MIT license. Check [LICENSE](LICENSE) for further details.
-
-$(Additional Licenses)
 
 *Copyright (c) $(Year) $(Developers Names)*
