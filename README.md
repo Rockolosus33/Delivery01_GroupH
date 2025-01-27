@@ -1,6 +1,6 @@
 ## Delivery 01 - PLATFORMER GAME
 
-![PIRARUN](Screenshots/screenshot01.png "$(Game Title)")
+![Captura de pantalla 2025-01-27 215430](https://github.com/user-attachments/assets/1b469e5f-2e7e-4c34-9471-309b68ec2ef2)
 
 ### Description
 
