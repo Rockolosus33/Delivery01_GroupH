@@ -2598,7 +2598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3715206433465638886, guid: 4d02a08ca07e0ca488d5cec384f1c929, type: 3}
       propertyPath: m_Name
-      value: Wall Platform (1)
+      value: WallPlatform (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2915,7 +2915,7 @@ GameObject:
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: MainCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4660,7 +4660,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3715206433465638886, guid: 4d02a08ca07e0ca488d5cec384f1c929, type: 3}
       propertyPath: m_Name
-      value: Wall Platform
+      value: WallPlatform
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9369,7 +9369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3715206433465638886, guid: 4d02a08ca07e0ca488d5cec384f1c929, type: 3}
       propertyPath: m_Name
-      value: Wall Platform
+      value: WallPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 3715206433465638886, guid: 4d02a08ca07e0ca488d5cec384f1c929, type: 3}
       propertyPath: m_Layer
@@ -9655,7 +9655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3490965268620882552, guid: 44f3ffe4c4994744cabe3ef62f936708, type: 3}
       propertyPath: m_Name
-      value: Big Platform
+      value: BigPlatform
       objectReference: {fileID: 0}
     - target: {fileID: 5641243522342374688, guid: 44f3ffe4c4994744cabe3ef62f936708, type: 3}
       propertyPath: m_LocalPosition.y

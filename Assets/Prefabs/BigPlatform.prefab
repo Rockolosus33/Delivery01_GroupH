@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7383013857004260976}
   m_Layer: 0
-  m_Name: Big Platform
+  m_Name: BigPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
