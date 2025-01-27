@@ -14,9 +14,9 @@ public class EndingCanvas : MonoBehaviour
         {
             finalScoreText.text = "Score: " + ScoreSystem.instance.GetScore().ToString();
 
-            if (TimeManager.instance.GetTime() > 30f)
+            if (TimeManager.instance.GetTime() > 60f)
             {
-                finalTimeText.text = "Total time: " + 30 + " seconds";
+                finalTimeText.text = "Total time: " + 60 + " seconds";
             }
             else
             {

@@ -14,11 +14,11 @@ public class TimeText : MonoBehaviour
 
     private void Start()
     {
-        label.text = "30";
+        label.text = "60";
     }
 
     private void Update()
     {
-        label.text = (30 - TimeManager.instance.GetTime()).ToString("F0");
+        label.text = (60 - TimeManager.instance.GetTime()).ToString("F0");
     }
 }

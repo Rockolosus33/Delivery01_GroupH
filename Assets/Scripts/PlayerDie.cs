@@ -24,7 +24,7 @@ public class PlayerDie : MonoBehaviour
     {
         playerAnimator.SetFloat("timeToDie", TimeManager.instance.GetTime());
 
-        if (TimeManager.instance.GetTime() >= 30f && !playerAnimator.GetBool("isDying"))
+        if (TimeManager.instance.GetTime() >= 60f && !playerAnimator.GetBool("isDying"))
         {
             playerAnimator.SetBool("isDying", false);
             playerHasDied = true;

@@ -277,7 +277,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 3
     m_ConditionEvent: timeToDie
-    m_EventTreshold: 30
+    m_EventTreshold: 60
   - m_ConditionMode: 2
     m_ConditionEvent: isDying
     m_EventTreshold: 0
